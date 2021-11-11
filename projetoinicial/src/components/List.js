@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'; 
 import Item from "./Item";
 
 function List() {
@@ -5,9 +6,9 @@ function List() {
     <>
       <h1>Minha Lista</h1>
       <ul>
-        <Item marca="Ferrari"/>
-        <Item marca="Fiat"/>
-        <Item marca="Renault"/>
+        <Item menu="Home" url={30}/>
+        <Item menu="Sobre" url={20} />
+        <Item menu="Contato" url={40}/>
       </ul>
     </>
   );
