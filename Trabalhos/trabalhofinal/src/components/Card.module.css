@@ -1,0 +1,13 @@
+.card {
+  display: flex;
+  padding: 20px 20px 20px 0;
+}
+h3 {
+  color: gold;
+}
+.conteudo {
+  margin-left: 20px;
+}
+p {
+  color: darkgray;
+}

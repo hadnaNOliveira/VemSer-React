@@ -1,0 +1,6 @@
+.menu ul li{
+  display: inline-flex;
+}
+.menu li {
+  margin-left: 15px;
+}
