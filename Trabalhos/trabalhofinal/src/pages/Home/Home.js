@@ -1,19 +1,18 @@
-import GifCat from '../../cat-loading.gif';
-import { useEffect, useContext, useState } from 'react';
+import { useEffect, useContext } from 'react';
 import { NYContext } from '../../context/NYContext';
 import Card from '../../components/Card';
 import { apiKey, apiNY } from '../../api';
+import GifCat from '../../cat-loading.gif';
 
 function Home() {
-  const { list, setList } = useContext(NYContext);
-  const [ loading, setLoading ] = useState(true);
+  const { list, setList, loading, setLoading } = useContext(NYContext);
   useEffect(() => {
     (async () => {
       setLoading(true)
       const {data} = await apiNY.get(`/home.json?api-key=${apiKey}`)
       setList(data.results);
+      setLoading(false);
     })()
-    setLoading(false);
   },[])
   return (
     <div className="container">

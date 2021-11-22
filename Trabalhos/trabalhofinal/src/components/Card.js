@@ -1,5 +1,6 @@
 import styles from './Card.module.css';
 import img from '../semimagem.jpg';
+import moment from 'moment';
 
 function Card({item}) {
  
@@ -9,7 +10,7 @@ function Card({item}) {
         <div className={styles.conteudo}>
           <h2>{item.title ? item.title : "Sem título"}</h2>
           <h3>{item.byline ? item.byline : "Sem autoria"}</h3>
-          <p>{item.published_date ? item.published_date : "Sem data"}</p>
+          <p>{item.published_date ? moment(item.published_date).format('DD/MM/YYYY') : "Sem data"}</p>
           <p>{item.abstract ? item.abstract : "Sem descrição"}</p>
         </div>
       </div>
