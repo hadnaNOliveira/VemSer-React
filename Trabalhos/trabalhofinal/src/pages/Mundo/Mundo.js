@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useContext } from 'react';
+import { NYContext } from '../../context/NYContext';
 import Card from '../../components/Card';
 import { apiKey, apiNY } from '../../api';
 
 function Mundo() {
-  const [list, setList] = useState([])
+  const { list, setList } = useContext(NYContext);
   useEffect(() => {
     (async () => {
       const {data} = await apiNY.get(`/world.json?api-key=${apiKey}`)
