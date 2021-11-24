@@ -1,0 +1,4 @@
+.item ul, li {
+  display: inline-flex;
+  padding: 0 15px 0 15px;
+}
