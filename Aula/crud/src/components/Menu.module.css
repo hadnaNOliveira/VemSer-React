@@ -1,0 +1,15 @@
+.menu {
+  color: #FFF;
+}
+.menu a {
+  color: #FFF;
+  text-decoration: none;
+  font-size: 22px;
+  
+}
+.menu ul li {
+  display: inline-flex;
+}
+.menu li {
+  margin-left: 10px;
+}
